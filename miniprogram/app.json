@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/price/price"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "本次加油",
+        "iconPath": "assets/images/jiayou.png",
+        "selectedIconPath": "assets/images/jiayou_active.png"
+      },
+      {
+        "pagePath": "pages/price/price",
+        "text": "今日油价",
+        "iconPath": "assets/images/jiage.png",
+        "selectedIconPath": "assets/images/jiage_active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "油耗统计",
+        "iconPath": "assets/images/tongji.png",
+        "selectedIconPath": "assets/images/tongji_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

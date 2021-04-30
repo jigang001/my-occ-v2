@@ -1,0 +1,4 @@
+/**index.wxss**/
+.weui-btn-area button{
+  width: 100%;
+}

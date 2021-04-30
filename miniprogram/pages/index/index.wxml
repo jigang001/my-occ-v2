@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+      <mp-cells footer="数据将保存在本地，请勿删除小程序。">
+        <mp-cell prop="km" title="公里数(KM)">
+          <input type="digit" bindinput="formInputChange" data-field="km" class="weui-input" placeholder="填写本次加油时的公里数"/>
+        </mp-cell>
+        <mp-cell prop="fill" title="加油量(L)">
+          <input type="digit" bindinput="formInputChange" data-field="fill" class="weui-input" placeholder="填写本次加油量"/>
+        </mp-cell>
+        <mp-cell prop="amount" title="支付金额(元)">
+            <input type="digit" bindinput="formInputChange" data-field="amount" class="weui-input" placeholder="填写本次支付金额"/>
+        </mp-cell>
+        <mp-cell prop="date" title="加油日期">
+          <picker data-field="date" mode="date" value="{{formData.date}}" bindchange="bindDateChange">
+            <view class="weui-input">{{formData.date}}</view>
+          </picker>
+        </mp-cell>
+      </mp-cells>
+    </mp-form>
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+    </view>
+  </view>
+</view>
