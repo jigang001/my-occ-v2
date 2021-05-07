@@ -20,7 +20,10 @@
       </mp-cells>
     </mp-form>
     <view class="weui-btn-area">
-        <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+      <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
     </view>
+    <div class="adContainer">
+      <ad unit-id="adunit-f0dd28c7bb9c94aa" ad-intervals="30"></ad>
+    </div>
   </view>
 </view>

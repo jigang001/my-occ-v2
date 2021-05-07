@@ -2,3 +2,9 @@
 .weui-btn-area .weui-btn{
   width: 100%;
 }
+.adContainer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
