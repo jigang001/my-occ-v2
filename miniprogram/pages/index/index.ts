@@ -9,7 +9,7 @@ Page({
       km: null, // 公里数
       fill: null, // 加油量
       amount: null, // 支付金额
-      date: null // 默认获取当前日期
+      date: formatTime(new Date()).split(' ')[0] // 默认获取当前日期
     },
     rules: [
       {
@@ -58,7 +58,7 @@ Page({
   // 保存
   submitForm() {
     let self: any = this
-    this.selectComponent('#form').validate((valid: any, errors: any) => {
+    self.selectComponent('#form').validate((valid: any, errors: any) => {
       console.log('valid', valid, errors)
       if (!valid) {
         const firstError = Object.keys(errors)
@@ -73,18 +73,23 @@ Page({
         try {
           wx.setStorageSync('recordData', self.data.recordData) // 保存记录
         } catch (e) { }
-        wx.switchTab({ // 跳转到记录页
+        self.setData({
+          [`formData`]: { // 重置表单
+            km: null, // 公里数
+            fill: null, // 加油量
+            amount: null, // 支付金额
+            date: formatTime(new Date()).split(' ')[0] // 默认获取当前日期
+          }
+        })
+        // 跳转到记录页
+        wx.switchTab({
           url: '../logs/logs'
         })
       }
     })
   },
-  onLoad(options) {
-    console.log(options)
-    this.setData({
-      [`formData.date`]: formatTime(new Date()).split(' ')[0] // 默认获取当前日期
-    })
-    console.log(this.data.formData.date)
+  onShow() {
+    console.log(app)
     this.getLogs()
   }
 })

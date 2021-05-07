@@ -1,8 +1,64 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.record{
+  background: #eee;
 }
-.log-item {
-  margin: 10rpx;
+.record .total{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.record .total .panel{
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px 15px 10px;
+}
+.bg-green{
+  background: #78ba00;
+}
+.bg-yellow{
+  background: #ff9900;
+}
+.record .total .panel .title{
+  font-size: 20px;
+}
+.record .total .panel .result{
+  display: flex;
+  font-size: 30px;
+}
+.record .total .panel .result .value{
+  flex: 1;
+}
+.record .total .panel .result .unit{
+  opacity: 0.5;
+}
+.weui-form-preview{
+  margin-bottom: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.weui-form-preview:after,
+.weui-form-preview:before{
+  display: none;
+}
+.weui-form-preview__hd:after{
+  left: 0;
+}
+.weui-form-preview__value{
+  font-size: 16px;
+}
+.weui-form-preview__btn_warn{
+  color: #fa5151;
+}
+.tips{
+  padding: 10px;
+  color: #999;
+  font-size: 12px;
+}
+.btn-box{
+  background: #fff;
+  padding: 10px;
+}
+.adContainer{
+  width: 100%;
 }

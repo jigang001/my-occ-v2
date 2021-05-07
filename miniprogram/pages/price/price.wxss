@@ -1,1 +1,21 @@
 /* miniprogram/pages/price/price.wxss */
+.adContainer{
+  width: 100%;
+}
+.table .tr{
+  display: flex;
+}
+.table .tr .th,
+.table .tr .td{
+  flex: 1;
+  font-size: 16px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+.table .thead .tr{
+  font-weight: bold;
+}
+.table .tbody .tr:nth-child(odd){
+  background: #eee;
+}

@@ -1,8 +1,8 @@
 {
   "usingComponents": {
+    "mp-form": "weui-miniprogram/form/form",
     "mp-cells": "weui-miniprogram/cells/cells",
-    "mp-cell": "weui-miniprogram/cell/cell",
-    "mp-form": "weui-miniprogram/form/form"
+    "mp-cell": "weui-miniprogram/cell/cell"
   },
   "navigationBarTitleText": "油耗记录助手"
 }

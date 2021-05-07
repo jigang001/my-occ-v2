@@ -1,6 +1,28 @@
 <!--miniprogram/pages/price/price.wxml-->
 <view class="container">
   <view class="page-body">
-    
+    <view class="adContainer">
+      <ad unit-id="adunit-f0dd28c7bb9c94aa" ad-intervals="30"></ad>
+    </view>
+    <view class="table">
+      <view class="thead">
+        <view class="tr">
+          <view class="th">城市</view>
+          <view class="th">92号</view>
+          <view class="th">95号</view>
+          <view class="th">98号</view>
+          <view class="th">柴油</view>
+        </view>
+      </view>
+      <view class="tbody">
+        <view class="tr" wx:for="{{gnyj.result}}" wx:key="index">
+          <view class="td">{{item['city']}}</view>
+          <view class="td">{{item['92h']}}</view>
+          <view class="td">{{item['95h']}}</view>
+          <view class="td">{{item['98h']}}</view>
+          <view class="td">{{item['0h']}}</view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

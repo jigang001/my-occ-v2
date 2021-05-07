@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "查看启动日志",
-  "usingComponents": {}
+  "navigationBarTitleText": "油耗统计",
+  "usingComponents": {
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  }
 }

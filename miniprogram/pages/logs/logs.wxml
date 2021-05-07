@@ -1,6 +1,52 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="record">
+  <div class="total">
+    <div class="panel bg-green">
+      <div class="title">百公里油耗</div>
+      <div class="result">
+        <div class="value">{{mpg}}</div>
+        <div class="unit">升/百公里</div>
+      </div>
+    </div>
+    <div class="panel bg-yellow">
+      <div class="title">每公里耗费</div>
+      <div class="result">
+        <div class="value">{{costPK}}</div>
+        <div class="unit">元/公里</div>
+      </div>
+    </div>
+  </div>
+  <div class="tips" v-if="recordData.length < 2">注：记录两次开始计算油耗，每次把油加满计算更准确。</div>
+  <view wx:for="{{recordData}}"  wx:key="index" class="weui-form-preview">
+    <view class="weui-form-preview__hd">
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">支付金额</label>
+        <em class="weui-form-preview__value">¥{{item.amount}}</em>
+      </view>
+    </view>
+    <view class="weui-form-preview__bd">
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">日期</label>
+        <span class="weui-form-preview__value">{{item.date}}</span>
+      </view>
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">公里数</label>
+        <span class="weui-form-preview__value">{{item.km}}公里</span>
+      </view>
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">加油量</label>
+        <span class="weui-form-preview__value">{{item.fill}}升</span>
+      </view>
+      <view class="weui-form-preview__item">
+        <label class="weui-form-preview__label">单价</label>
+        <span class="weui-form-preview__value">{{item.unitPrice}}元/升</span>
+      </view>
+    </view>
+    <view class="weui-form-preview__ft">
+      <button class="weui-form-preview__btn weui-form-preview__btn_warn" bindtap="deleteItem" data-index="{{index}}">删除此条</button>
+    </view>
+  </view>
+  <mp-dialog title="提醒" show="{{confirmShow}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '取消'}, {text: '确定'}]}}">
+    <view>确定要删除本条记录吗？</view>
+  </mp-dialog>
 </view>
